@@ -60,35 +60,37 @@ export default function PersonaSwitcher() {
           </p>
 
           {/* Liquid Interactive Tab Switcher */}
-          <div className="mt-8 inline-flex p-1.5 rounded-2xl bg-charcoal-dark border border-white/10 shadow-2xl relative">
+          <div className="mt-8 w-full max-w-md flex p-1 sm:p-1.5 rounded-2xl bg-charcoal-dark border border-white/10 shadow-2xl relative mx-auto">
             <button
               onClick={() => setActiveTab('investor')}
-              className={`relative z-10 flex items-center justify-center gap-2 px-6 sm:px-8 py-3 rounded-xl font-cairo font-bold text-sm sm:text-base transition-colors min-h-[48px] ${
+              className={`flex-1 relative z-10 flex items-center justify-center gap-1.5 sm:gap-2 px-2.5 sm:px-6 py-2.5 sm:py-3 rounded-xl font-cairo font-bold text-xs sm:text-base transition-colors min-h-[44px] ${
                 activeTab === 'investor' ? 'text-obsidian' : 'text-halan/80 hover:text-white'
               }`}
             >
-              <TrendingUp className="w-4 h-4" />
-              <span>بوابة المستثمر الشريك</span>
+              <TrendingUp className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+              <span className="sm:hidden">بوابة المستثمر</span>
+              <span className="hidden sm:inline">بوابة المستثمر الشريك</span>
             </button>
 
             <button
               onClick={() => setActiveTab('visitor')}
-              className={`relative z-10 flex items-center justify-center gap-2 px-6 sm:px-8 py-3 rounded-xl font-cairo font-bold text-sm sm:text-base transition-colors min-h-[48px] ${
+              className={`flex-1 relative z-10 flex items-center justify-center gap-1.5 sm:gap-2 px-2.5 sm:px-6 py-2.5 sm:py-3 rounded-xl font-cairo font-bold text-xs sm:text-base transition-colors min-h-[44px] ${
                 activeTab === 'visitor' ? 'text-obsidian' : 'text-halan/80 hover:text-white'
               }`}
             >
-              <Sparkles className="w-4 h-4" />
-              <span>تجربة الزائر والسائح</span>
+              <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+              <span className="sm:hidden">تجربة الزائر</span>
+              <span className="hidden sm:inline">تجربة الزائر والسائح</span>
             </button>
 
             {/* Moving pill background */}
             <motion.div
               layout
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-              className={`absolute top-1.5 bottom-1.5 rounded-xl bg-gradient-to-r from-gold to-gold-dark shadow-lg ${
+              className={`absolute top-1 sm:top-1.5 bottom-1 sm:bottom-1.5 rounded-xl bg-gradient-to-r from-gold to-gold-dark shadow-lg ${
                 activeTab === 'investor' 
-                  ? 'right-1.5 w-[calc(50%-6px)]' 
-                  : 'right-[calc(50%+3px)] w-[calc(50%-6px)]'
+                  ? 'right-1 sm:right-1.5 w-[calc(50%-4px)] sm:w-[calc(50%-6px)]' 
+                  : 'right-[calc(50%+2px)] sm:right-[calc(50%+3px)] w-[calc(50%-4px)] sm:w-[calc(50%-6px)]'
               }`}
             />
           </div>
@@ -108,7 +110,7 @@ export default function PersonaSwitcher() {
             >
               {/* Left Column: Investor Benefits (7 cols) */}
               <div className="lg:col-span-7 flex flex-col gap-6">
-                <div className="p-8 rounded-3xl bg-charcoal/90 border border-gold/30 backdrop-blur-xl">
+                <div className="p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-charcoal/90 border border-gold/30 backdrop-blur-xl">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center">
                       <TrendingUp className="w-6 h-6 text-gold" />
@@ -187,7 +189,7 @@ export default function PersonaSwitcher() {
 
               {/* Right Column: Pitch Deck & Investment Kit Download (5 cols) */}
               <div className="lg:col-span-5 flex flex-col gap-4">
-                <div className="p-8 rounded-3xl bg-gradient-to-br from-charcoal to-charcoal-light border border-white/15 backdrop-blur-xl relative overflow-hidden">
+                <div className="p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-charcoal to-charcoal-light border border-white/15 backdrop-blur-xl relative overflow-hidden">
                   <div className="w-12 h-12 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center mb-6">
                     <FileText className="w-6 h-6 text-gold" />
                   </div>
@@ -246,7 +248,7 @@ export default function PersonaSwitcher() {
               className="grid grid-cols-1 md:grid-cols-3 gap-6"
             >
               {/* Feature 1: Shopping */}
-              <div className="p-8 rounded-3xl bg-charcoal/90 border border-white/10 hover:border-gold/40 transition-all group flex flex-col justify-between">
+              <div className="p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-charcoal/90 border border-white/10 hover:border-gold/40 transition-all group flex flex-col justify-between">
                 <div>
                   <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:bg-gold/15 group-hover:border-gold/30 transition-all">
                     <ShoppingBag className="w-6 h-6 text-gold" />
@@ -265,7 +267,7 @@ export default function PersonaSwitcher() {
               </div>
 
               {/* Feature 2: Waterfront Dining */}
-              <div className="p-8 rounded-3xl bg-charcoal/90 border border-white/10 hover:border-tigris/40 transition-all group flex flex-col justify-between">
+              <div className="p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-charcoal/90 border border-white/10 hover:border-tigris/40 transition-all group flex flex-col justify-between">
                 <div>
                   <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:bg-tigris/15 group-hover:border-tigris/30 transition-all">
                     <Coffee className="w-6 h-6 text-tigris" />
@@ -284,7 +286,7 @@ export default function PersonaSwitcher() {
               </div>
 
               {/* Feature 3: Luxury Hospitality */}
-              <div className="p-8 rounded-3xl bg-charcoal/90 border border-white/10 hover:border-gold/40 transition-all group flex flex-col justify-between">
+              <div className="p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-charcoal/90 border border-white/10 hover:border-gold/40 transition-all group flex flex-col justify-between">
                 <div>
                   <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:bg-gold/15 group-hover:border-gold/30 transition-all">
                     <Hotel className="w-6 h-6 text-gold" />

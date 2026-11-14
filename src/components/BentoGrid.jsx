@@ -124,7 +124,7 @@ export default function BentoGrid() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.08 }}
-                className={`group relative rounded-3xl bg-charcoal/80 border border-white/10 hover:border-gold/40 backdrop-blur-xl overflow-hidden transition-all duration-500 flex flex-col justify-between p-6 sm:p-8 ${pillar.span}`}
+                className={`group relative rounded-2xl sm:rounded-3xl bg-charcoal/80 border border-white/10 hover:border-gold/40 backdrop-blur-xl overflow-hidden transition-all duration-500 flex flex-col justify-between p-5 sm:p-8 ${pillar.span}`}
               >
                 {/* Visual Image Background for Hotel Pillar */}
                 {hasImage && (
@@ -132,10 +132,10 @@ export default function BentoGrid() {
                     <img 
                       src={pillar.image} 
                       alt={pillar.imageAlt} 
-                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-1000 ease-out opacity-40 group-hover:opacity-50"
+                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-1000 ease-out opacity-35 group-hover:opacity-50"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/80 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/90 to-charcoal/50" />
                     <div className="absolute inset-0 bg-gradient-to-r from-charcoal via-transparent to-charcoal" />
                   </div>
                 )}
@@ -143,34 +143,34 @@ export default function BentoGrid() {
                 {/* Card Content */}
                 <div className="relative z-10">
                   {/* Top Bar with Tag and Icon */}
-                  <div className="flex items-center justify-between gap-3 mb-6">
+                  <div className="flex items-center justify-between gap-3 mb-4 sm:mb-6">
                     <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/10 text-xs font-semibold text-halan/90">
                       <span className={`w-1.5 h-1.5 rounded-full ${pillar.accent === 'gold' ? 'bg-gold' : 'bg-tigris'}`} />
                       <span>{pillar.tag}</span>
                     </span>
 
-                    <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-gold/50 group-hover:bg-gold/15 transition-all">
-                      <Icon className="w-6 h-6 text-gold group-hover:scale-110 transition-transform" />
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-gold/50 group-hover:bg-gold/15 transition-all shrink-0">
+                      <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-gold group-hover:scale-110 transition-transform" />
                     </div>
                   </div>
 
                   {/* Title & Description */}
-                  <h3 className="text-xl sm:text-2xl font-cairo font-bold text-white mb-3 group-hover:text-gold transition-colors leading-snug">
+                  <h3 className="text-lg sm:text-2xl font-cairo font-bold text-white mb-2.5 sm:mb-3 group-hover:text-gold transition-colors leading-snug">
                     {pillar.title}
                   </h3>
 
-                  <p className="text-sm sm:text-base text-slate-muted leading-relaxed mb-6">
+                  <p className="text-xs sm:text-base text-slate-muted leading-relaxed mb-4 sm:mb-6">
                     {pillar.desc}
                   </p>
                 </div>
 
                 {/* Bottom Architectural Specs */}
                 <div className="relative z-10 pt-4 border-t border-white/10 mt-auto">
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
                     {pillar.specs.map((spec, sIdx) => (
                       <span 
                         key={sIdx}
-                        className="inline-flex items-center gap-1.5 text-xs text-halan/80 bg-white/5 px-2.5 py-1.5 rounded-lg border border-white/5"
+                        className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs text-halan/80 bg-white/5 px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-lg border border-white/5"
                       >
                         <ShieldCheck className="w-3.5 h-3.5 text-gold/80" />
                         <span>{spec}</span>

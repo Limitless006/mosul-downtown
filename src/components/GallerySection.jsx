@@ -7,10 +7,10 @@ import {
   ChevronRight, 
   ChevronLeft, 
   Sparkles, 
-  Info,
-  Calendar,
-  Building2,
-  MapPin
+  Info, 
+  Calendar, 
+  Building2, 
+  MapPin 
 } from 'lucide-react'
 
 export default function GallerySection() {
@@ -106,12 +106,12 @@ export default function GallerySection() {
           </p>
 
           {/* Filter Tabs */}
-          <div className="flex flex-wrap items-center justify-center gap-2 mt-8">
+          <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mt-8">
             {filters.map((filter) => (
               <button
                 key={filter.id}
                 onClick={() => setActiveFilter(filter.id)}
-                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all min-h-[44px] ${
+                className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all min-h-[40px] sm:min-h-[44px] ${
                   activeFilter === filter.id
                     ? 'bg-gold text-obsidian shadow-lg shadow-gold/20'
                     : 'bg-white/5 text-halan/80 hover:text-white hover:bg-white/10 border border-white/5'
@@ -133,7 +133,7 @@ export default function GallerySection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               onClick={() => setSelectedImage(item)}
-              className="group relative rounded-3xl overflow-hidden bg-charcoal border border-white/10 hover:border-gold/50 cursor-pointer shadow-2xl transition-all duration-500"
+              className="group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-charcoal border border-white/10 hover:border-gold/50 cursor-pointer shadow-2xl transition-all duration-500"
             >
               {/* Image Container with aspect ratio */}
               <div className="relative aspect-[16/10] w-full overflow-hidden">
@@ -147,8 +147,8 @@ export default function GallerySection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
 
                 {/* Top Badge */}
-                <div className="absolute top-4 right-4">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-charcoal/80 backdrop-blur-md border border-white/15 text-xs text-gold font-medium">
+                <div className="absolute top-3.5 right-3.5 sm:top-4 sm:right-4">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-lg bg-charcoal/80 backdrop-blur-md border border-white/15 text-[11px] sm:text-xs text-gold font-medium">
                     <Calendar className="w-3 h-3" />
                     <span>{item.date}</span>
                   </span>
@@ -160,7 +160,7 @@ export default function GallerySection() {
                 </div>
 
                 {/* Bottom Overlay Details */}
-                <div className="absolute bottom-0 inset-x-0 p-6 flex flex-col justify-end">
+                <div className="absolute bottom-0 inset-x-0 p-4 sm:p-6 flex flex-col justify-end">
                   <h3 className="text-lg sm:text-xl font-cairo font-bold text-white mb-2 group-hover:text-gold transition-colors">
                     {item.title}
                   </h3>
@@ -194,16 +194,16 @@ export default function GallerySection() {
               className="relative max-w-5xl w-full max-h-[90vh] flex flex-col rounded-3xl bg-charcoal border border-gold/30 shadow-2xl overflow-hidden"
             >
               {/* Modal Top Bar */}
-              <div className="flex items-center justify-between p-4 sm:p-6 border-b border-white/10 bg-charcoal-dark">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-gold/15 flex items-center justify-center">
+              <div className="flex items-center justify-between p-3.5 sm:p-6 border-b border-white/10 bg-charcoal-dark">
+                <div className="flex items-center gap-2.5 sm:gap-3">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gold/15 flex items-center justify-center shrink-0">
                     <Building2 className="w-5 h-5 text-gold" />
                   </div>
                   <div>
-                    <h3 className="text-base sm:text-lg font-cairo font-bold text-white">
+                    <h3 className="text-sm sm:text-lg font-cairo font-bold text-white line-clamp-1">
                       {selectedImage.title}
                     </h3>
-                    <p className="text-xs text-gold">
+                    <p className="text-[11px] sm:text-xs text-gold">
                       {selectedImage.meta}
                     </p>
                   </div>
@@ -211,41 +211,41 @@ export default function GallerySection() {
 
                 <button
                   onClick={() => setSelectedImage(null)}
-                  className="p-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-halan hover:text-white transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
+                  className="p-2 sm:p-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-halan hover:text-white transition-colors min-h-[40px] min-w-[40px] sm:min-h-[44px] sm:min-w-[44px] flex items-center justify-center shrink-0"
                   aria-label="إغلاق المعاينة"
                 >
-                  <X className="w-6 h-6" />
+                  <X className="w-5 h-5 sm:w-6 sm:h-6" />
                 </button>
               </div>
 
               {/* Modal Image Area */}
-              <div className="relative flex-1 bg-black/60 flex items-center justify-center overflow-hidden min-h-[300px] sm:min-h-[460px]">
+              <div className="relative flex-1 bg-black/60 flex items-center justify-center overflow-hidden min-h-[260px] sm:min-h-[460px]">
                 <img 
                   src={selectedImage.src} 
                   alt={selectedImage.title} 
-                  className="max-h-[65vh] w-auto max-w-full object-contain"
+                  className="max-h-[60vh] sm:max-h-[65vh] w-auto max-w-full object-contain"
                 />
 
                 {/* Left/Right Navigation Buttons */}
                 <button
                   onClick={handleNext}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-2xl bg-charcoal/80 hover:bg-charcoal border border-white/20 text-white flex items-center justify-center transition-all hover:scale-110 min-h-[44px]"
+                  className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-charcoal/80 hover:bg-charcoal border border-white/20 text-white flex items-center justify-center transition-all hover:scale-110 min-h-[36px] sm:min-h-[44px]"
                   aria-label="الصورة التالية"
                 >
-                  <ChevronRight className="w-6 h-6" />
+                  <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
                 </button>
 
                 <button
                   onClick={handlePrev}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-2xl bg-charcoal/80 hover:bg-charcoal border border-white/20 text-white flex items-center justify-center transition-all hover:scale-110 min-h-[44px]"
+                  className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-charcoal/80 hover:bg-charcoal border border-white/20 text-white flex items-center justify-center transition-all hover:scale-110 min-h-[36px] sm:min-h-[44px]"
                   aria-label="الصورة السابقة"
                 >
-                  <ChevronLeft className="w-6 h-6" />
+                  <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
                 </button>
               </div>
 
               {/* Modal Footer Caption */}
-              <div className="p-4 sm:p-6 bg-charcoal border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+              <div className="p-3.5 sm:p-6 bg-charcoal border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5 sm:gap-3">
                 <p className="text-sm text-slate-muted max-w-3xl">
                   {selectedImage.subtitle}
                 </p>

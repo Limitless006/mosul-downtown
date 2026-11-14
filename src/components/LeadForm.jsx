@@ -9,9 +9,9 @@ import {
   Building, 
   DollarSign, 
   MessageSquare, 
-  Sparkles,
-  ShieldCheck,
-  PhoneCall
+  Sparkles, 
+  ShieldCheck, 
+  PhoneCall 
 } from 'lucide-react'
 
 export default function LeadForm() {
@@ -80,32 +80,34 @@ export default function LeadForm() {
         </div>
 
         {/* Lead Capture Box */}
-        <div className="rounded-3xl bg-charcoal/90 border border-gold/30 backdrop-blur-2xl p-6 sm:p-10 shadow-2xl shadow-black/80">
+        <div className="rounded-3xl bg-charcoal/90 border border-gold/30 backdrop-blur-2xl p-5 sm:p-10 shadow-2xl shadow-black/80">
           
           {/* Form Type Tabs */}
-          <div className="flex rounded-2xl bg-charcoal-dark border border-white/10 p-1.5 mb-8 max-w-md mx-auto">
+          <div className="flex rounded-2xl bg-charcoal-dark border border-white/10 p-1 sm:p-1.5 mb-8 max-w-md mx-auto">
             <button
               type="button"
               onClick={() => setFormType('investor')}
-              className={`flex-1 py-3 px-4 rounded-xl text-xs sm:text-sm font-cairo font-bold transition-all min-h-[44px] ${
+              className={`flex-1 py-2.5 sm:py-3 px-2 sm:px-4 rounded-xl text-xs sm:text-sm font-cairo font-bold transition-all min-h-[44px] ${
                 formType === 'investor'
                   ? 'bg-gradient-to-r from-gold to-gold-dark text-obsidian shadow-md'
                   : 'text-halan/70 hover:text-white'
               }`}
             >
-              استفسار استثماري وتملك وحدات
+              <span className="sm:hidden">استثمار وتملك</span>
+              <span className="hidden sm:inline">استفسار استثماري وتملك وحدات</span>
             </button>
 
             <button
               type="button"
               onClick={() => setFormType('visitor')}
-              className={`flex-1 py-3 px-4 rounded-xl text-xs sm:text-sm font-cairo font-bold transition-all min-h-[44px] ${
+              className={`flex-1 py-2.5 sm:py-3 px-2 sm:px-4 rounded-xl text-xs sm:text-sm font-cairo font-bold transition-all min-h-[44px] ${
                 formType === 'visitor'
                   ? 'bg-gradient-to-r from-gold to-gold-dark text-obsidian shadow-md'
                   : 'text-halan/70 hover:text-white'
               }`}
             >
-              استفسار عام وزوار ونشرة بريدية
+              <span className="sm:hidden">زوار واستفسار عام</span>
+              <span className="hidden sm:inline">استفسار عام وزوار ونشرة بريدية</span>
             </button>
           </div>
 
@@ -276,7 +278,7 @@ export default function LeadForm() {
                       <label className="block text-xs sm:text-sm font-medium text-halan/90 mb-2">
                         الميزانية الاستثمارية التقريبية (بالدولار الأمريكي)
                       </label>
-                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
                         {[
                           { id: '30k-60k', label: '30,000$ - 60,000$' },
                           { id: '60k-120k', label: '60,000$ - 120,000$' },
@@ -287,7 +289,7 @@ export default function LeadForm() {
                             type="button"
                             key={budgetOpt.id}
                             onClick={() => setFormData(p => ({ ...p, budget: budgetOpt.id }))}
-                            className={`p-3 rounded-xl border text-xs sm:text-sm font-semibold text-center transition-all min-h-[44px] ${
+                            className={`p-2.5 sm:p-3 rounded-xl border text-[11px] sm:text-sm font-semibold text-center transition-all min-h-[44px] ${
                               formData.budget === budgetOpt.id
                                 ? 'bg-gold/15 border-gold text-gold shadow-md'
                                 : 'bg-charcoal-dark border-white/10 text-slate-muted hover:text-white hover:border-white/20'

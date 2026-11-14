@@ -23,7 +23,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="relative bg-charcoal-dark border-t border-white/10 pt-16 pb-12 overflow-hidden">
+    <footer className="relative bg-charcoal-dark border-t border-white/10 pt-12 sm:pt-16 pb-8 sm:pb-12 overflow-hidden">
       
       {/* Background Ambience */}
       <div className="absolute top-0 right-1/3 w-[500px] h-[300px] bg-gold/5 blur-[150px] pointer-events-none" />
@@ -145,7 +145,7 @@ export default function Footer() {
                 <Phone className="w-5 h-5 text-gold shrink-0" />
                 <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 font-sans font-semibold text-halan" dir="ltr">
                   <a href="tel:07501214455" className="hover:text-gold transition-colors">0750 121 4455</a>
-                  <span>/</span>
+                  <span className="hidden sm:inline">/</span>
                   <a href="tel:07783688048" className="hover:text-gold transition-colors">0778 368 8048</a>
                 </div>
               </div>

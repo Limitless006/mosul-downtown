@@ -7,9 +7,9 @@ import {
   CheckCircle2, 
   Users, 
   Calendar, 
-  BadgeCheck,
-  FileCheck2,
-  TrendingUp
+  BadgeCheck, 
+  FileCheck2, 
+  TrendingUp 
 } from 'lucide-react'
 
 export default function DeveloperSection() {
@@ -81,16 +81,16 @@ export default function DeveloperSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-transparent" />
 
               {/* Ceremony Caption Overlay */}
-              <div className="absolute bottom-4 right-4 left-4 sm:bottom-6 sm:right-6 sm:left-6 p-4 sm:p-5 rounded-2xl bg-charcoal/90 backdrop-blur-xl border border-white/10">
+              <div className="absolute bottom-3 right-3 left-3 sm:bottom-6 sm:right-6 sm:left-6 p-3.5 sm:p-5 rounded-2xl bg-charcoal/90 backdrop-blur-xl border border-white/10">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-gold/20 flex items-center justify-center shrink-0">
                     <FileCheck2 className="w-5 h-5 text-gold" />
                   </div>
                   <div>
-                    <h4 className="font-cairo font-bold text-white text-sm sm:text-base">
+                    <h4 className="font-cairo font-bold text-white text-xs sm:text-base">
                       حفل وضع حجر الأساس الرسمي • 28 أيار / مايو 2024
                     </h4>
-                    <p className="text-xs sm:text-sm text-slate-muted">
+                    <p className="text-[11px] sm:text-sm text-slate-muted">
                       بحضور معالي محافظ نينوى، ورئيس هيئة استثمار نينوى، ورئيس غرفة تجارة نينوى ومجلس إدارة مجموعة المنيف.
                     </p>
                   </div>
@@ -107,13 +107,13 @@ export default function DeveloperSection() {
             transition={{ duration: 0.7 }}
             className="lg:col-span-5 flex flex-col justify-between gap-6"
           >
-            <div className="p-8 rounded-3xl bg-charcoal/80 border border-white/10 backdrop-blur-xl">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center shadow-lg shadow-gold/20 shrink-0">
-                  <Building2 className="w-7 h-7 text-obsidian stroke-[2.2]" />
+            <div className="p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-charcoal/80 border border-white/10 backdrop-blur-xl">
+              <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center shadow-lg shadow-gold/20 shrink-0">
+                  <Building2 className="w-6 h-6 sm:w-7 sm:h-7 text-obsidian stroke-[2.2]" />
                 </div>
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-cairo font-black text-white">
+                  <h3 className="text-lg sm:text-2xl font-cairo font-black text-white leading-snug">
                     شركة المشاريع المتعددة (MPC Group)
                   </h3>
                   <p className="text-xs sm:text-sm text-gold font-semibold">
@@ -122,20 +122,20 @@ export default function DeveloperSection() {
                 </div>
               </div>
 
-              <p className="text-sm text-slate-muted leading-relaxed mb-6">
+              <p className="text-xs sm:text-sm text-slate-muted leading-relaxed mb-4 sm:mb-6">
                 تعتبر شركة المشاريع المتعددة (MPC) إحدى أركان النهضة العمرانية الرائدة في العراق، وتملك سجلاً حافلاً بتنفيذ أضخم المشاريع التجارية والبنى التحتية بمواصفات هندسية تضاهي أرقى المعايير الدولية.
               </p>
 
-              <div className="space-y-3 pt-4 border-t border-white/10">
-                <div className="flex items-center gap-3 text-xs sm:text-sm text-halan">
+              <div className="space-y-2.5 sm:space-y-3 pt-4 border-t border-white/10">
+                <div className="flex items-center gap-2.5 sm:gap-3 text-xs sm:text-sm text-halan">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
                   <span>تاريخ حافل بتنفيذ مشاريع البنى التحتية والتطوير العقاري</span>
                 </div>
-                <div className="flex items-center gap-3 text-xs sm:text-sm text-halan">
+                <div className="flex items-center gap-2.5 sm:gap-3 text-xs sm:text-sm text-halan">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
                   <span>رؤية مستدامة تجمع بين حداثة العمارة وهوية الموصل التراثية</span>
                 </div>
-                <div className="flex items-center gap-3 text-xs sm:text-sm text-halan">
+                <div className="flex items-center gap-2.5 sm:gap-3 text-xs sm:text-sm text-halan">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
                   <span>توفير أكثر من 2,500 فرصة عمل مباشرة وغير مباشرة لأبناء نينوى</span>
                 </div>
@@ -156,7 +156,7 @@ export default function DeveloperSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="p-6 rounded-2xl bg-charcoal/60 border border-white/10 hover:border-gold/30 transition-all"
+                className="p-4 sm:p-6 rounded-2xl bg-charcoal/60 border border-white/10 hover:border-gold/30 transition-all"
               >
                 <div className="w-12 h-12 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center mb-4">
                   <Icon className="w-6 h-6 text-gold" />
