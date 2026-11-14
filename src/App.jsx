@@ -48,26 +48,26 @@ export default function App() {
       <Footer />
 
       {/* Floating Quick Action Hotline Bar */}
-      <div className="fixed bottom-5 left-5 z-40 flex items-center gap-3">
+      <div className="fixed bottom-4 sm:bottom-5 left-4 sm:left-5 z-40 flex items-center gap-2.5 sm:gap-3 pb-[env(safe-area-inset-bottom)]">
         {/* WhatsApp Direct Action */}
         <a
           href="https://wa.me/9647501214455"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 px-4 py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm shadow-xl shadow-emerald-950/60 transition-all hover:scale-105 min-h-[44px]"
+          className="flex items-center gap-2 px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm shadow-xl shadow-emerald-950/60 transition-all hover:scale-105 min-h-[44px]"
           title="تواصل معنا عبر واتساب"
         >
-          <MessageCircle className="w-5 h-5" />
+          <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
           <span className="hidden sm:inline">واتساب الاستثمار</span>
         </a>
 
         {/* Phone Quick Call */}
         <a
           href="tel:07501214455"
-          className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-gold to-gold-dark text-obsidian shadow-xl shadow-gold/30 hover:scale-105 transition-all min-h-[44px] min-w-[44px]"
+          className="flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-gold to-gold-dark text-obsidian shadow-xl shadow-gold/30 hover:scale-105 transition-all min-h-[44px] min-w-[44px]"
           title="اتصال هاتفي مباشر"
         >
-          <Phone className="w-5 h-5 stroke-[2.2]" />
+          <Phone className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
         </a>
       </div>
     </div>

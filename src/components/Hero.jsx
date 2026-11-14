@@ -51,10 +51,10 @@ export default function Hero() {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-cairo font-black text-white leading-[1.2] mb-4 tracking-tight"
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-cairo font-black text-white leading-[1.25] mb-4 tracking-tight"
           >
             مجمع <span className="bg-gradient-to-l from-gold-light via-gold to-gold-accent bg-clip-text text-transparent">المنيف</span> التجاري
-            <span className="block text-2xl sm:text-3xl md:text-4xl font-bold text-halan/90 mt-2 font-cairo">
+            <span className="block text-xl sm:text-3xl md:text-4xl font-bold text-halan/90 mt-2 font-cairo">
               داون تاون الموصل • Mosul Downtown
             </span>
           </motion.h1>
@@ -98,9 +98,9 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.95, y: 30 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="relative max-w-5xl mx-auto rounded-3xl overflow-hidden border border-gold/30 shadow-2xl shadow-black/90 group"
+          className="relative max-w-5xl mx-auto rounded-2xl sm:rounded-3xl overflow-hidden border border-gold/30 shadow-2xl shadow-black/90 group"
         >
-          <div className="relative aspect-[16/9] sm:aspect-[21/9] w-full overflow-hidden bg-charcoal-dark">
+          <div className="relative aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9] w-full overflow-hidden bg-charcoal-dark">
             <img 
               src="https://img.youtube.com/vi/cixNeaVPunw/maxresdefault.jpg" 
               alt="الرندر المعماري الرئيسي لمجمع المنيف التجاري - داون تاون الموصل" 
@@ -112,23 +112,23 @@ export default function Hero() {
             <div className="absolute inset-0 bg-gradient-to-r from-obsidian/60 via-transparent to-obsidian/60" />
             
             {/* Floating Architectural Badge */}
-            <div className="absolute bottom-4 sm:bottom-6 right-4 sm:right-6 left-4 sm:left-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 p-4 sm:p-5 rounded-2xl bg-charcoal/85 backdrop-blur-xl border border-white/15 shadow-xl">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-xl bg-gold/15 border border-gold/40 flex items-center justify-center shrink-0">
-                  <Building2 className="w-6 h-6 text-gold" />
+            <div className="absolute bottom-3 sm:bottom-6 right-3 sm:right-6 left-3 sm:left-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5 sm:gap-3 p-3.5 sm:p-5 rounded-xl sm:rounded-2xl bg-charcoal/90 backdrop-blur-xl border border-white/15 shadow-xl">
+              <div className="flex items-center gap-2.5 sm:gap-3">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gold/15 border border-gold/40 flex items-center justify-center shrink-0">
+                  <Building2 className="w-5 h-5 sm:w-6 sm:h-6 text-gold" />
                 </div>
                 <div>
-                  <h3 className="font-cairo font-bold text-white text-sm sm:text-base">
+                  <h3 className="font-cairo font-bold text-white text-xs sm:text-base leading-snug">
                     الواجهة المعمارية الرئيسية & القبة الزجاجية الأيقونية
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-muted">
+                  <p className="hidden sm:block text-xs sm:text-sm text-slate-muted">
                     تصميم هندسي مستقبلي يدمج 7,900 م² من المساحات التجارية والضيافة
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 self-end sm:self-center">
-                <div className="flex items-center gap-1.5 text-xs text-gold font-medium bg-gold/10 px-3 py-1.5 rounded-lg border border-gold/20">
+              <div className="flex items-center gap-2 self-start sm:self-center">
+                <div className="flex items-center gap-1.5 text-[11px] sm:text-xs text-gold font-medium bg-gold/10 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg border border-gold/20">
                   <MapPin className="w-3.5 h-3.5" />
                   <span>الموصل القديمة - ساحة الميدان</span>
                 </div>
@@ -138,7 +138,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Enhanced Luxury Down-Scroll Indicator */}
-        <div className="flex justify-center mt-12">
+        <div className="flex justify-center mt-8 sm:mt-12">
           <motion.button
             onClick={() => scrollTo('#stats')}
             initial={{ opacity: 0, y: 15 }}

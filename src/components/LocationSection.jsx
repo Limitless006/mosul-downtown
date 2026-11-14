@@ -78,7 +78,7 @@ export default function LocationSection() {
             transition={{ duration: 0.7 }}
             className="lg:col-span-7 flex flex-col"
           >
-            <div className="relative rounded-3xl overflow-hidden border border-white/15 bg-charcoal h-full min-h-[380px] sm:min-h-[480px] shadow-2xl group">
+            <div className="relative rounded-3xl overflow-hidden border border-white/15 bg-charcoal h-full min-h-[280px] sm:min-h-[480px] shadow-2xl group">
               <img 
                 src="https://img.youtube.com/vi/sKUGNkyZbl8/maxresdefault.jpg" 
                 alt="المنظور الجوي الشامل لموقع داون تاون الموصل بساحة الميدان ونهر دجلة" 
@@ -89,15 +89,15 @@ export default function LocationSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/40 to-transparent" />
               
               {/* Location Badge Indicator */}
-              <div className="absolute top-4 right-4 sm:top-6 sm:right-6">
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-charcoal/90 backdrop-blur-md border border-gold/40 text-gold text-xs sm:text-sm font-bold shadow-xl">
-                  <MapPin className="w-4 h-4 text-gold" />
+              <div className="absolute top-3.5 right-3.5 sm:top-6 sm:right-6">
+                <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-charcoal/90 backdrop-blur-md border border-gold/40 text-gold text-xs sm:text-sm font-bold shadow-xl">
+                  <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gold" />
                   <span>الجانب الأيمن • ساحة الميدان</span>
                 </span>
               </div>
 
               {/* Coordinates & Waterfront Overlay */}
-              <div className="absolute bottom-4 right-4 left-4 sm:bottom-6 sm:right-6 sm:left-6 p-4 sm:p-5 rounded-2xl bg-charcoal/90 backdrop-blur-xl border border-white/10">
+              <div className="absolute bottom-3 right-3 left-3 sm:bottom-6 sm:right-6 sm:left-6 p-3.5 sm:p-5 rounded-2xl bg-charcoal/90 backdrop-blur-xl border border-white/10">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
                   <div>
                     <h4 className="font-cairo font-bold text-white text-sm sm:text-base flex items-center gap-2">
@@ -154,7 +154,7 @@ export default function LocationSection() {
             })}
 
             {/* Quick Map Action Card */}
-            <div className="p-4 rounded-2xl bg-gradient-to-r from-charcoal-light to-charcoal border border-gold/20 flex items-center justify-between gap-3">
+            <div className="p-4 rounded-2xl bg-gradient-to-r from-charcoal-light to-charcoal border border-gold/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
               <div className="flex items-center gap-3">
                 <ShieldCheck className="w-5 h-5 text-gold shrink-0" />
                 <span className="text-xs sm:text-sm text-halan font-medium">

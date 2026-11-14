@@ -63,16 +63,16 @@ export default function Navbar() {
           {/* Logo & Brand Identity */}
           <a 
             href="#hero" 
-            className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-gold/50 rounded-xl p-1"
+            className="flex items-center gap-2.5 sm:gap-3 group focus:outline-none focus:ring-2 focus:ring-gold/50 rounded-xl p-1"
           >
-            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center shadow-lg shadow-gold/25 group-hover:scale-105 transition-transform shrink-0">
-              <Building2 className="w-6 h-6 text-obsidian stroke-[2.2]" />
+            <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center shadow-lg shadow-gold/25 group-hover:scale-105 transition-transform shrink-0">
+              <Building2 className="w-5 h-5 sm:w-6 sm:h-6 text-obsidian stroke-[2.2]" />
             </div>
             <div className="flex flex-col">
-              <span className="font-cairo font-black text-lg sm:text-xl text-white tracking-wide group-hover:text-gold transition-colors leading-tight">
+              <span className="font-cairo font-black text-base sm:text-xl text-white tracking-wide group-hover:text-gold transition-colors leading-tight">
                 مجمع المنيف التجاري
               </span>
-              <span className="text-[11px] sm:text-xs text-gold font-medium tracking-wider">
+              <span className="text-[10px] sm:text-xs text-gold font-medium tracking-wider truncate max-w-[160px] sm:max-w-none">
                 داون تاون الموصل • Mosul Downtown
               </span>
             </div>
@@ -136,7 +136,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -15, scale: 0.98 }}
             transition={{ duration: 0.2 }}
-            className="lg:hidden mt-2 max-w-7xl mx-auto rounded-2xl bg-charcoal/95 backdrop-blur-2xl border border-gold/25 p-5 shadow-2xl shadow-black/80"
+            className="lg:hidden mt-2 max-w-7xl mx-auto rounded-2xl bg-charcoal/95 backdrop-blur-2xl border border-gold/25 p-4 sm:p-5 shadow-2xl shadow-black/80 max-h-[82vh] overflow-y-auto overscroll-contain"
           >
             <div className="flex flex-col gap-2">
               {navLinks.map((link) => {
